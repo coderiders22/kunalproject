@@ -6,8 +6,11 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:5173")
+
 @RequestMapping("/bfhl")
 public class DataController {
+    @CrossOrigin(origins = "http://localhost:5173")
 
     @PostMapping
     public DataResponse processData(@RequestBody DataRequest request) {
@@ -32,7 +35,7 @@ public class DataController {
                 highestAlphabet
         );
     }
-
+    @CrossOrigin(origins = "http://localhost:5173")
     @GetMapping
     public String getOperationCode() {
         return "{\"operation_code\":1}";
