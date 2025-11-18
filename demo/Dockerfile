@@ -1,4 +1,4 @@
-FROM openjdk:latest
+FROM openjdk:17-jdk-slim
 VOLUME /tmp
 EXPOSE 8080
 
